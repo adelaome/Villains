@@ -1,4 +1,5 @@
 class FeedbackController < ApplicationController
+   
    def new
       @feedback = Feedback.new
    end
@@ -12,8 +13,9 @@ class FeedbackController < ApplicationController
       end
    end
    
+   
    def show
-      @feedback = Feedback.find(params[:id])
+      @feedback = Feedback.all
    end
    
    def edit

@@ -1,9 +1,16 @@
-<p>
-   <strong>Title:</strong>
-   <%= @feedback.title %>
-</p>
-
-<p>
-   <strong>Text:</strong>
-   <%= @feedback.text %>
-</p>
+<h1>Listing Feedback</h1>
+ 
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+ 
+  <% @feedback.each do |feedback| %>
+    <tr>
+      <td><%= feedback.title %></td>
+      <td><%= feedback.text %></td>
+      <td><%= link_to 'Show', feedback_path(feedback) %></td>
+    </tr>
+  <% end %>
+</table>

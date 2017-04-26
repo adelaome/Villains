@@ -7,14 +7,16 @@
     	<ul class="topnav" id="myTopnav">
     		<li><a  href="/">Home</a></li>
     		<li><a id="active" href= "/feedbacks/new">FeedBack</a></li>
-    		<li><a href= "/about_us/new">About Us</a></li>
+    		<li><a href="/about_us/new">About Us</a></li>
     		<li><a href="/users/sign_in">Login</a></li>
     		<li><a href="/users/sign_up">Sign Up</a></li>
     	</ul>
     </nav>
 </div>
 
-<%= form_for @feedback, url: {action: "create"} do |f| %> 
+<div id="main">
+  <section class="input_wrapper">
+  <%= form_for @feedback, url: {action: "create"} do |f| %> 
   <p>
     <%= f.label :title %><br>
     <%= f.text_field :title %>
@@ -26,11 +28,11 @@
   </p>
  
   <p>
-    <%= f.submit %>
+    <%= f.submit "Post Feedback", class:"btn-submit" %>
   </p>
-<% end %>
-
-
+  <% end %>
+  </section>
+</div>
 
 
 <footer class>
