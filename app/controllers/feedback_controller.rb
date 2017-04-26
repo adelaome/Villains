@@ -1,5 +1,4 @@
 class FeedbackController < ApplicationController
-   
    def new
       @feedback = Feedback.new
    end
