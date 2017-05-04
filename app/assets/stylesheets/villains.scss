@@ -4,15 +4,17 @@
 html,body{
    margin: 0px;
    height: 100%;
-   min-width: 700px;
-   //background-image: url(/assets/background.jpg);
+   
+   
 }
 
 #Profile_Tab{
   position: relative;
   top: 13px;
 }
-
+li{
+  height: 100%;
+}
 .pull-right{
   position: absolute;
   right: 0px;
@@ -117,6 +119,15 @@ html,body{
 .img-circle {
     border-radius: 50%;
 }
-#profileBanner{
+#banner{
+  padding: 1% 4%;
+  //background-image: url(/assets/Villains.png);
+}
+#User-Options{
+  position: absolute;
+  width: 100%;
+  margin: 0px 4%;
+  
+  
   
 }
