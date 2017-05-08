@@ -7,7 +7,6 @@ class VillainsController < ApplicationController
          @villain = Villain.new
       end
    end
-   
    def create
       @villain = Villain.new(villain_params)
       @villain.users_id = current_user.id
