@@ -1,9 +1,28 @@
-<p>
-   <strong>Title:</strong>
-   <%= @feedback.title %>
-</p>
+<div class=bar>
+    <h1 id=header_title>
+        villains
+    </h1>
+    <nav>
+    	<ul class="topnav" id="myTopnav">
+    		<li><a  href="/">Home</a></li>
+    		<li><a id="active" href= "/feedback/new">FeedBack</a></li>
+    		<li><a href="/about_us">About Us</a></li>
+    		<li><a href="/users/sign_in">Login</a></li>
+    		<li><a href="/users/sign_up">Sign Up</a></li>
+    	</ul>
+    </nav>
+</div>
+<div id="main">
+   <div class="feedback">
+      <p>
+         <strong>Title:</strong>
+         <%= @feedback.title %>
+      </p>
+      
+      <p>
+         <%= @feedback.text %>
+      </p>
+      <button type="button" class="btn"><%= link_to 'Other Comments', feedback_index_url %></button>
+   </div>   
+</div>
 
-<p>
-   <strong>Text:</strong>
-   <%= @feedback.text %>
-</p>

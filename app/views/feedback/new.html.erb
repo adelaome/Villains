@@ -1,4 +1,3 @@
-
 <div class=bar>
     <h1 id=header_title>
         villains
@@ -6,8 +5,8 @@
     <nav>
     	<ul class="topnav" id="myTopnav">
     		<li><a  href="/">Home</a></li>
-    		<li><a id="active" href= "/feedbacks/new">FeedBack</a></li>
-    		<li><a href="/about_us/new">About Us</a></li>
+    		<li><a id="active" href= "/feedback/new">FeedBack</a></li>
+    		<li><a href="/about_us">About Us</a></li>
     		<li><a href="/users/sign_in">Login</a></li>
     		<li><a href="/users/sign_up">Sign Up</a></li>
     	</ul>
@@ -15,21 +14,26 @@
 </div>
 
 <div id="main">
-  <section class="input_wrapper">
+  <section class="banner">
+     <h1 class="slogan1">We need your Help!</h1>
+     <p id="description">We're assuming your a frequent visitor of Villains.com and have an opinion about it's design. <br>
+     Therefore we know we can trust you and your gut feeling. Tell us how you feel about the website's design and layout.
+     This is incredibly helpful to us, so please be brutally honest... We'll still be friends, we promise.</p>
+  </section>
+ 
+  <section >
   <%= form_for @feedback, url: {action: "create"} do |f| %> 
   <p>
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, cols: 30, rows: 5 %>
   </p>
  
   <p>
     <%= f.label :text %><br>
-    <%= f.text_area :text %>
+    <%= f.text_area :text, cols: 100, rows: 5 %>
   </p>
- 
-  <p>
     <%= f.submit "Post Feedback", class:"btn-submit" %>
-  </p>
+    <button type="button" class="btn"><%= link_to 'Other Comments', feedback_index_url %></button>
   <% end %>
   </section>
 </div>

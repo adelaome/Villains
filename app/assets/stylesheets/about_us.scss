@@ -1,18 +1,7 @@
 // Place all the styles related to the Villains controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-html,body{
-   margin: 0px;
-   height: 100%;
-   font-family: 'Montserrat Alternates', sans-serif;
-}
-
-
 /* ------------------------------------------------------------- */
-#main{
-   width: 100%;
-   height: 90%;
-}
 #container_left{
   width: 55%;
   padding-left: 5%;
@@ -30,12 +19,6 @@ html,body{
 #header1{
    font-size: 30px;
    color: #000000;
-}
-
-footer{
-   border-top: 10px solid #f44336;
-   text-align: center;
-   height: 10%;
 }
 
 

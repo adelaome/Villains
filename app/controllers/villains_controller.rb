@@ -27,7 +27,7 @@ class VillainsController < ApplicationController
       @villain = Villain.find(params[:id])
       
       if @villain.update(villain_params)
-         redirect_to @article
+         redirect_to @villain
       else
          render 'edit'
       end

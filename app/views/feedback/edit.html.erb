@@ -1,0 +1,36 @@
+<div class=bar>
+    <h1 id=header_title>
+        villains
+    </h1>
+    <nav>
+    	<ul class="topnav">
+    		<li><a id="active" href="/">Home</a></li>
+    		<li><a href="/feedback/new">FeedBack</a></li>
+    		<li><a href="/about_us">About Us</a></li>
+    		<li><a href="/users/sign_in">Login</a></li>
+    		<li><a href="/users/sign_up">Sign Up</a></li>
+    	</ul>
+    </nav>
+</div>
+
+<div id="main">
+   <h1>Editing article</h1>
+  <section >
+  <%= form_for @feedback,  :url => { :action => "update" } do |f| %> 
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title, cols: 30, rows: 5 %>
+  </p>
+ 
+  <p>
+    <%= f.label :text %><br>
+    <%= f.text_area :text, cols: 100, rows: 5 %>
+  </p>
+    <%= f.submit "Post Feedback", class:"btn-submit" %>
+    <button type="button" class="btn"><%= link_to 'Other Comments', feedback_index_url %></button>
+  <% end %>
+  </section>
+</div>
+
+ 
+<%= link_to 'Back', feedback_index_url %>

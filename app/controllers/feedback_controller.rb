@@ -1,22 +1,24 @@
 class FeedbackController < ApplicationController
+   def index
+      @feedback = Feedback.all
+   end 
+   
    def new
       @feedback = Feedback.new
    end
    
    def create
-      @feedback = Feedback.new(feedback_params)
+      @feedback = Feedback.new(params[:feedback].permit(:title, :text))
+      #@feedback = Feedback.new(feedback_params)
       if @feedback.save
-         redirect_to @feedback
+         redirect_to "/feedback"
       else
          render 'new'
       end
    end
    
-   
    def show
-     # @feedback = Feedback.all
      @feedback = Feedback.find(params[:id])
-     
    end
    
    def edit
@@ -37,7 +39,7 @@ class FeedbackController < ApplicationController
       @feedback = Feedback.find(params[:id])
       @feedback.destroy
       
-      redirect_to feedback_path
+      redirect_to feedback_index_url
    end
    
    private 

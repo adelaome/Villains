@@ -1,13 +1,22 @@
 // Place all the styles related to the Villains controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-html,body{
-   margin: 0px;
-   height: 100%;
-   
-   
-}
 
+#villainsMain{
+  width: 100%;
+  min-width: 700px;
+  margin: 0px;
+  display: block;
+  padding: 0px;
+}
+#footer{
+  border-top: 10px solid #f44336;
+  text-align: center;
+  display: block;
+  float: left;
+  width: 100%;
+  overflow:hidden;
+}
 #Profile_Tab{
   position: relative;
   top: 13px;
@@ -16,8 +25,8 @@ li{
   height: 100%;
 }
 .pull-right{
-  position: absolute;
-  right: 0px;
+  position: relative;
+  left: 40%;
 }
 
 /* --------------------------------------------------------------------------------------- */
@@ -33,11 +42,10 @@ li{
 }
 
 .mySlides {
-    display: none;
-    padding: 0px 50px;
-    overflow: hidden;
-}
-
+  display: none;
+  padding: 0px 50px;
+  overflow: hidden;
+} 
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
@@ -116,18 +124,91 @@ li{
   border: 1px solid #f44336;
   
 }
-.img-circle {
-    border-radius: 50%;
-}
+/*--------------------------- Show.css ----------------------------------*/
 #banner{
-  padding: 1% 4%;
+  margin: 1% 0px;
+  height: 150px;
+  position: relative;
+  padding: 0% 9%;
   //background-image: url(/assets/Villains.png);
 }
-#User-Options{
+#img{
   position: absolute;
+  bottom: -60px;
+}
+#name{
+  position: absolute;
+  left: 380px;
+  top: 110px;
+  color: #4d4d4d;
+}
+#User-Options{
   width: 100%;
-  margin: 0px 4%;
+  height: 60px;
+  margin: 0px;
+  background-color: #C52F24;
+  float: left;
+  padding-left: 20%;
+  overflow: hidden;
+}
+#User-Options nav ul li a{
+  color: white;
+  text-decoration: none;
+}
+.profileBtn{
+  color: #FFFFFF;
+  font-size: 18px;
+   text-transform: uppercase;
+   text-align: center;
+   background: #C52F24;
+   padding: auto;
+   border: 0;
+   width: 100%;
+   height: 100%;
+}
+#widgetsContain{
+  display: block;
+  float: left;
+  padding: 2% 9%;
+  width: 100%;
   
-  
-  
+}
+.widget{
+  box-shadow: 10px 10px 5px #888888;
+  background-color: white;
+  color: #4d4d4d;
+  margin: 40px 0px;
+}
+.physicalPowers{
+  background-color: #C52F24; /* Red */
+  border: none;
+  color: white;
+  padding: 0px 10px;
+  margin: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.enhancedAbilites{
+  background-color: #2494c5; /* Green */
+  border: none;
+  color: white;
+  padding: 0px 10px;
+  margin: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.mentalBased{
+  background-color: #7124c5; /* Purple */
+  border: none;
+  color: white;
+  padding: 0px 10px;
+  margin: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }

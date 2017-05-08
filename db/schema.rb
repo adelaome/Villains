@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170424085242) do
+ActiveRecord::Schema.define(version: 20170508003339) do
 
   create_table "feedbacks", force: :cascade do |t|
     t.string   "title"
@@ -19,14 +19,12 @@ ActiveRecord::Schema.define(version: 20170424085242) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "followings", force: :cascade do |t|
-    t.integer  "person_id"
-    t.integer  "follower_id"
-    t.boolean  "blocked"
+  create_table "posts", force: :cascade do |t|
+    t.string   "post"
     t.integer  "villains_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.index ["villains_id"], name: "index_followings_on_villains_id"
+    t.index ["villains_id"], name: "index_posts_on_villains_id"
   end
 
   create_table "users", force: :cascade do |t|
